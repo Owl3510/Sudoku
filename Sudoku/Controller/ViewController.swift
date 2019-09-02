@@ -144,6 +144,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         
+        
         var time: Timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(ViewController.counter), userInfo: nil, repeats: true)
         
         super.viewDidLoad()
@@ -189,7 +190,10 @@ class ViewController: UIViewController {
         }))
         alert.addAction(UIAlertAction(title: "OK", style: .cancel, handler: { action in
             
-            
+            //let startView = self.storyboard?.instantiateViewController(withIdentifier: "Start") as! StartViewController
+           // self.navigationController?.pushViewController(startView, animated: true)
+            //self.navigationController?.popToViewController(startView, animated: true)
+            //self.present(startView, animated: true, completion: nil)
             self.navigationController?.popToRootViewController(animated: true)
             
         }))
