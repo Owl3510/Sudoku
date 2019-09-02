@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14492.1" systemVersion="18E226" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Cell" representedClassName="Cell" syncable="YES" codeGenerationType="class">
+        <attribute name="number" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="cellToTable" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Table" inverseName="tableToCell" inverseEntity="Table" syncable="YES"/>
+    </entity>
+    <entity name="Table" representedClassName="Table" syncable="YES" codeGenerationType="class">
+        <attribute name="column" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="row" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="tableToCell" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Cell" inverseName="cellToTable" inverseEntity="Cell" syncable="YES"/>
+    </entity>
+    <entity name="Timer" representedClassName="Timer" syncable="YES" codeGenerationType="class">
+        <attribute name="date" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="time" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Timer" positionX="142.5703125" positionY="15.6953125" width="128" height="75"/>
+        <element name="Table" positionX="-54" positionY="9" width="128" height="90"/>
+        <element name="Cell" positionX="-263.7578125" positionY="-74.35546875" width="128" height="75"/>
+    </elements>
+</model>
