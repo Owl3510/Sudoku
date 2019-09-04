@@ -78,8 +78,15 @@ class funcForCell {
         
         var index = 1
         for numberLabel in labelOfNumber {
+            if checkForLabel(labelNumbers, index ) > 0 {
             
-            numberLabel.text = String(checkForLabel(labelNumbers, index))
+            numberLabel.text = String(abs(checkForLabel(labelNumbers, index)))
+            } else if checkForLabel(labelNumbers, index ) == 0{
+                numberLabel.text = ""
+            } else {
+             
+                numberLabel.text = String("\(abs(checkForLabel(labelNumbers, index)))+")
+            }
             index += 1
         }
     }
